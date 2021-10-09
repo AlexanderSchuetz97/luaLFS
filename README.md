@@ -102,9 +102,9 @@ The original lfs.lua is also included and only loaded when Globals.debugLib is s
 Maven:
 ````
 <dependency>
-    <groupId>io.github.alexanderschuetz97</groupId>
-    <artifactId>luaLFS</artifactId>
-    <version>TODO</version>
+  <groupId>io.github.alexanderschuetz97</groupId>
+  <artifactId>lualfs</artifactId>
+  <version>0.1</version>
 </dependency>
 ````
 
