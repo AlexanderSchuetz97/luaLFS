@@ -2,7 +2,7 @@
 luaLFS is a library compatible to LuaFileSystem using unix system commands instead of native c libraries.
 
 The primary focus of this implementation is to provide easy integration of scripts that use lfs/LuaFileSystem in linux/unix environments
-where LuaFileSystem cannot be easily installed. This includes but is not limited to Java Applications using LuaJ.
+where LuaFileSystem cannot be easily installed. This includes but is not limited to Java applications using LuaJ.
 
 If your application/environment has no such constraints then I do not recommend using luaLFS.<br>
 Use LuaFileSystem instead: https://github.com/keplerproject/luafilesystem/

@@ -11,7 +11,7 @@
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>luaLFS is library compatible to LuaFileSystem using linux system commands instead of native libraries</description>
-    <url>TODO</url>
+    <url>https://github.com/AlexanderSchuetz97/luaLFS/tree/master</url>
 
     <licenses>
         <license>
@@ -45,9 +45,9 @@
                         <Bundle-SymbolicName>${project.groupId}.${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Name>${project.groupId}.${project.artifactId}</Bundle-Name>
                         <Bundle-Version>${project.version}</Bundle-Version>
-                        <Export-Package>io.github.alexanderschuetz97.luaLFSTest.*</Export-Package>
+                        <Export-Package>io.github.alexanderschuetz97.lualfs.*</Export-Package>
                         <Import-Package>org.luaj.vm2.*</Import-Package>
-                        <Include-Resource>{maven-resources},simplelfs/=target/luajcoutput/</Include-Resource>
+                        <Include-Resource>{maven-resources},lualfs/=target/luajcoutput/</Include-Resource>
                     </instructions>
                 </configuration>
             </plugin>
