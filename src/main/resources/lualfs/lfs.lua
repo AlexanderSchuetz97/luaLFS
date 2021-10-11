@@ -20,7 +20,7 @@
 
 local package = require("package")
 
-if package.loaded.lfs then
+if type(package.loaded.lfs) == "table" then
     return package.loaded.lfs
 end
 
@@ -46,7 +46,7 @@ local loadfile_ = loadfile
 
 local lfs = {}
 lfs["_VERSION"] = "1.8.0" -- for computability
-lfs["_VERSION_LUAFS"] = "0.1" -- to distinguish
+lfs["_VERSION_LUALFS"] = "0.1.1" -- to distinguish
 lfs["_DESCRIPTION"] = "luaLFS is library compatible to LuaFileSystem using linux system commands instead of native libraries"
 lfs["_COPYRIGHT"] = "Copyright (C) 2021 Alexander Schütz"
 
