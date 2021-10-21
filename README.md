@@ -1,7 +1,7 @@
 # luaLFS
-luaLFS is a library compatible to LuaFileSystem using unix system commands instead of native c libraries.
+luaLFS is a library compatible to LuaFileSystem using system commands instead of native c libraries.
 
-The primary focus of this implementation is to provide easy integration of scripts that use lfs/LuaFileSystem in linux/unix environments
+The primary focus of this implementation is to provide easy integration of scripts that use lfs/LuaFileSystem in complex environments
 where LuaFileSystem cannot be easily installed. This includes but is not limited to Java applications using LuaJ.
 
 If your application/environment has no such constraints then I do not recommend using luaLFS.<br>
@@ -12,8 +12,10 @@ luaLFS is released under the GNU General Public License Version 3. <br>
 A copy of the GNU General Public License Version 3 can be found in the COPYING file.<br>
 
 ## Requirements
-As implied in the description this library will only function on linux or other unix systems provided they
-have the same system commands available. The following commands are used by luaLFS:
+As implied in the description this library will only work if the operating system provides certain commands.
+
+#### Linux/Unix
+The following commands are used by luaLFS on Unix systems:
 - pwd (initially to determine work directory)
 - bash (by all functions)
 - stat (by all functions)
@@ -21,23 +23,29 @@ have the same system commands available. The following commands are used by luaL
 - mkdir (by lfs.mkdir)
 - rm (by lfs.rmdir)
 - ls (by lfs.dir)
+- ln (by lfs.link)
 - touch (by lfs.touch)
-
+- 
 #### Windows
-Windows is currently not supported at all.<br>
-luaLFS may still be relevant to you even if your scripts have to support windows since you can also
-load luaLFS in a way that it only loads when c based LuaFileSystem is not installed. This may allow for easier deployment/usage on linx/unix machines 
-and will not change any requirements for windows machines. See the below for an example on how to do this.
+The following commands are used by luaLFS on Windows systems:
+- cmd (by all functions)
+- powershell (by all functions)
+  - Resolve-Path
+  - Get-Item
+- mklink (by lfs.link)
+  - Will only work if the system is in developer mode or the process has Admin rights
+- rmdir (by lfs.rmdir)
+- mkdir (by lfs.mkdir)
 
 ## Limitations
 The C based LFS implementation by LuaFileSystem should be preferred since it is faster than luaLFS.
 
 The error messages returned by LuaFileSystem and luaLFS are not identical in all cases. <br>
-LuaLFS returns stderr from the unix programs it runs when an error occurs <br>
+LuaLFS returns stderr/stdout from the system programs it runs when an error occurs <br>
 LuaFileSystem returns strerror(errno) from GLIBC. 
 
 From all functions that the original LuaFileSystem library offers only the following 3 functions cannot be implemented
-using standard linux system commands:
+using system commands:
 
 - lfs.lock_dir
 - lfs.lock
