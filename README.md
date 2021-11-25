@@ -8,8 +8,8 @@ If your application/environment has no such constraints then I do not recommend 
 Use LuaFileSystem instead: https://github.com/keplerproject/luafilesystem/
 
 ## License
-luaLFS is released under the GNU General Public License Version 3. <br>
-A copy of the GNU General Public License Version 3 can be found in the COPYING file.<br>
+luaLFS is released under the GNU Lesser General Public License Version 3. <br>
+A copy of the GNU Lesser General Public License Version 3 can be found in the COPYING & COPYING.LESSER files.<br>
 
 ## Requirements
 As implied in the description this library will only work if the operating system provides certain commands.
