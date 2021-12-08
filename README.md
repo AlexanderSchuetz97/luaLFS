@@ -11,6 +11,14 @@ Use LuaFileSystem instead: https://github.com/keplerproject/luafilesystem/
 luaLFS is released under the GNU Lesser General Public License Version 3. <br>
 A copy of the GNU Lesser General Public License Version 3 can be found in the COPYING & COPYING.LESSER files.<br>
 
+## Discontinued
+Due to low performance and compatibility issues I have decided to stop working on luaLFS.
+
+Instead of implementing the LuaFileSystem API using system commands I have decided to port LuaFileSystem for LuaJ in Java.
+If your use case is LuaJ then I recommend using
+https://github.com/AlexanderSchuetz97/LuajLFS
+instead. It has much better compatibility than luaLFS.
+
 ## Requirements
 As implied in the description this library will only work if the operating system provides certain commands.
 
